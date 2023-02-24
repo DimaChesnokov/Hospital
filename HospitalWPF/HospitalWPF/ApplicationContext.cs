@@ -12,9 +12,9 @@ namespace HospitalWPF
     class ApplicationContext : DbContext
     {
         // Список, в котором будут находится определенные элементы с какой либо таблицы.
-        public DbSet<User> Users { get; set; }
+        //public DbSet<User> Users { get; set; }
 
         //Передача названия подключения,чтобы работать с бд
-        public ApplicationContext() : base("DefaultConnection") { }
+        //public ApplicationContext() : base("DefaultConnection") { }
     }
 }
