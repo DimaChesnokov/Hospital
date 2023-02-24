@@ -1,0 +1,31 @@
+﻿<Window x:Class="HospitalWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalWPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Hospital"  Height="600" Width="900">
+    <Grid Background="#dff7f7">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="500" CornerRadius="20" >
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Регистрация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                <Grid Margin="0 0 0 20">
+
+                    <Button HorizontalAlignment="Left" Content="Войти"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FFF60D0D" Height="32" Margin="348,0,0,0" VerticalAlignment="Bottom"   Cursor="Hand"  Click="Button_Click_1" > </Button>
+                </Grid>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF6C40BA"></TextBox>
+                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFilledPasswordBox}"  Background="Transparent"></PasswordBox>
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+                <TextBox x:Name="textBoxAge" materialDesign:HintAssist.Hint="Age" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+                <Button Content="Зарегистрироваться" Margin="0 20" Background="#FFF60D0D" FontSize="14" Click="Button_Click" ></Button>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
