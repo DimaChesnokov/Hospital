@@ -79,8 +79,8 @@ namespace HospitalWPF
 
                
                 User EntryUser = null;
-                
-                
+
+
                 //using (ApplicationContext db = new ApplicationContext())
                 //{
                 //    EntryUser = db.Users.Where(entry => entry.login == login && entry.pass == pass).FirstOrDefault();

@@ -82,11 +82,11 @@ namespace HospitalWPF
                 //User user = new User(login, email, pass, age);
                 //Обращаемся к табличке Users
                 //db.Users.Add(user);
-                
+
                 //Сохраним объект в бд
                 //db.SaveChanges();
-                
-                
+
+
             }
         }
 
