@@ -23,7 +23,7 @@ namespace HospitalWPF
     {
 
         //ApplicationContext db;
-        DataBase database = new DataBase();
+        //DataBase database = new DataBase();
         public MainWindow()
         {
             InitializeComponent();
@@ -92,9 +92,9 @@ namespace HospitalWPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            EntranceCabinet entranceCabinet = new EntranceCabinet();
-            entranceCabinet.Show();
-            Hide();
+            //EntranceCabinet entranceCabinet = new EntranceCabinet();
+            //entranceCabinet.Show();
+            //Hide();
         }
     }
 }

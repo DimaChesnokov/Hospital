@@ -21,5 +21,29 @@ namespace HospitalWPF
         {
             InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private List<string> doctors = new List<string> { "Терапевт", "Хирург", "Стоматолог", "Оториноларинголог" };
+        private List<string> procedures = new List<string> { "ЭКГ", "Флюрография", "Анализ крови", "Анализ мочи" };
+
+        private void ComboBoxSelectService_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(ComboBoxSelectService.SelectedIndex == 0)
+            {
+                LabelService.Content = "Врач:";
+                ComboBoxSelection.Items.Clear();
+                ComboBoxSelection.ItemsSource = doctors;
+            }
+            else
+            {
+                LabelService.Content = "Процедуры:";
+                ComboBoxSelection.Items.Clear();
+                ComboBoxSelection.ItemsSource = procedures;
+            }
+        }
     }
 }

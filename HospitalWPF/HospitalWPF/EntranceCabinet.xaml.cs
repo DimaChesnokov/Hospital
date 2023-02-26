@@ -27,9 +27,9 @@ namespace HospitalWPF
             InitializeComponent();
            
         }
-        ApplicationContext db;
+        //ApplicationContext db;
 
-        DataBase dataBase = new DataBase();
+        //DataBase dataBase = new DataBase();
         private void Button_Entry_Click(object sender, RoutedEventArgs e)
         {
             String login = textBoxLogin.Text.Trim();
