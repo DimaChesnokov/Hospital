@@ -35,13 +35,11 @@ namespace HospitalWPF
             if(ComboBoxSelectService.SelectedIndex == 0)
             {
                 LabelService.Content = "Врач:";
-                ComboBoxSelection.Items.Clear();
                 ComboBoxSelection.ItemsSource = doctors;
             }
             else
             {
                 LabelService.Content = "Процедуры:";
-                ComboBoxSelection.Items.Clear();
                 ComboBoxSelection.ItemsSource = procedures;
             }
         }

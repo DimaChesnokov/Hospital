@@ -128,3 +128,10 @@ C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debu
 C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\HospitalWPF.csproj.CopyComplete
 C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\HospitalWPF.dll
 C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\HospitalWPF.pdb
+C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.dll.config
+C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.deps.json
+C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.runtimeconfig.json
+C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.runtimeconfig.dev.json
+C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.dll
+C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.pdb
+C:\Users\Максим\Documents\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\HospitalWPF.genruntimeconfig.cache
