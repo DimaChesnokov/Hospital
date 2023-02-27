@@ -34,8 +34,10 @@ namespace HospitalWPF
         {
             String login = textBoxLogin.Text.Trim();
             String pass = passBox.Password.Trim();
-           
 
+            PersonalAccount pa = new PersonalAccount();
+            pa.Show();
+            Close();
             if (login.Length < 3)
             {
                 textBoxLogin.ToolTip = "Ошибка!";
@@ -54,14 +56,14 @@ namespace HospitalWPF
                 passBox.ToolTip = "";
                 passBox.Background = Brushes.Transparent;
 
-
+                
                 //SqlDataAdapter adapter = new SqlDataAdapter();
                 //DataTable table = new DataTable();
                 //string querystring = $"select id_user, login_user, password_user from register where login_user = '{login}' and password_user = '{pass}' ";
                 //SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
                 //adapter.SelectCommand = command;
                 //adapter.Fill(table);
-                
+
                 //if(table.Rows.Count == 1)
                 //{
                 //    MessageBox.Show("Успешный вход");
@@ -77,7 +79,7 @@ namespace HospitalWPF
                 //    MessageBox.Show("Такого пользователя не существует");
                 //}
 
-               
+
                 User EntryUser = null;
 
 

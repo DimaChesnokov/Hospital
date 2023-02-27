@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Максим\\Documents\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj": {}
+    "C:\\Users\\i\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Максим\\Documents\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj": {
+    "C:\\Users\\i\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Максим\\Documents\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj",
+        "projectUniqueName": "C:\\Users\\i\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj",
         "projectName": "HospitalWPF",
-        "projectPath": "C:\\Users\\Максим\\Documents\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj",
-        "packagesPath": "C:\\Users\\Максим\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Максим\\Documents\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\obj\\",
+        "projectPath": "C:\\Users\\i\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj",
+        "packagesPath": "C:\\Users\\я\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\i\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Максим\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\я\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,8 +60,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -72,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

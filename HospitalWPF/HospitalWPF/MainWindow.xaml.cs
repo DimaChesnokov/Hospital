@@ -92,8 +92,13 @@ namespace HospitalWPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //EntranceCabinet entranceCabinet = new EntranceCabinet();
-            //entranceCabinet.Show();
+            textBoxLogin.ToolTip = "";
+            passBox.ToolTip = "";
+            textBoxEmail.ToolTip = "";
+            textBoxAge.ToolTip = "";
+            EntranceCabinet entranceCabinet = new EntranceCabinet();
+            entranceCabinet.Show();
+            Close();
             //Hide();
         }
     }
