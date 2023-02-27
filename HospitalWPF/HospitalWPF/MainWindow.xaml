@@ -22,7 +22,7 @@
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFilledPasswordBox}"  Background="Transparent"></PasswordBox>
                 <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
                 <TextBox x:Name="textBoxAge" materialDesign:HintAssist.Hint="Age" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <Button Content="Зарегистрироваться" Margin="0 20" Background="#FFF60D0D" FontSize="14" Click="Button_Click" ></Button>
+                <Button Content="Зарегистрироваться" Margin="0 20" Background="#FFF60D0D" FontSize="14" Click="Button_Click" Cursor="Hand" ></Button>
 
             </StackPanel>
         </Border>

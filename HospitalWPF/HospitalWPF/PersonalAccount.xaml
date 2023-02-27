@@ -8,17 +8,36 @@
         mc:Ignorable="d"
         Title="PersonalAccount" Height="600" Width="900">
     <Grid Background="#dff7f7">
-        <Border MinWidth="500" Margin="20" Background="White" VerticalAlignment="Center" Padding="200" MaxWidth="900" CornerRadius="40" >
+        <Border MinWidth="500" Margin="35,0,35,0" Background="White" VerticalAlignment="Center" Padding="200" MaxWidth="900" CornerRadius="40" Width="830" Height="440" RenderTransformOrigin="0.468,0.416" >
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
             </Border.Effect>
-            <StackPanel>
-                <TextBlock Text="Личный кабинет" FontSize="30" FontWeight="Bold"/>
-                <Grid Margin="5 0 0 20"  />
+            <Grid Margin="201,-101,-69,-12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
+                <StackPanel Grid.Column="0" Grid.Row="0" Margin="60,0,0,0" Height="136" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <TextBlock Text="Имя" FontSize="14" FontWeight="Bold" Height="27"/>
+                    <TextBlock Text="Фамилия" FontSize="14" FontWeight="Bold" Height="27" />
+                    <TextBlock Text="Отчество" FontSize="14" FontWeight="Bold" Height="27" />
+                    <TextBlock Text="Возраст" FontSize="14" FontWeight="Bold" Height="27" />
+                    <TextBlock Text="Пол" FontSize="14" FontWeight="Bold" Height="27" />
+                </StackPanel>
 
-            </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0" Margin="0,0,54,0" Height="136" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <TextBox Text="Имя" FontSize="14" FontWeight="Bold" Height="27" Foreground="#FF797979" />
+                    <TextBox Text="Фамилия" FontSize="14" FontWeight="Bold" Height="27" Foreground="#FF797979" />
+                    <TextBox Text="Отчество" FontSize="14" FontWeight="Bold" Height="27" Foreground="#FF797979" />
+                    <TextBox Text="Возраст" FontSize="14" FontWeight="Bold" Height="27" Foreground="#FF797979" />
+                    <TextBox Text="Пол" FontSize="14" FontWeight="Bold" Height="27" Foreground="#FF797979" />
+                </StackPanel>
+            </Grid>
         </Border>
+        <TextBlock Text="Личный кабинет" FontSize="30" FontWeight="Bold" Margin="319,98,320,447"/>
+        <Button Content="Записаться к врачу" Margin="523,440,127,112" Background="#FFF60D0D" FontSize="14" Click="" Cursor="Hand" Width="250" />
+        <Button Content="Фотокарточка" Margin="668,170,82,264" Background="#FFA3A2A2" FontSize="14" Click="" Cursor="Hand" Width="150" Height="150" BorderBrush="#FF575757" />
 
     </Grid>
 </Window>

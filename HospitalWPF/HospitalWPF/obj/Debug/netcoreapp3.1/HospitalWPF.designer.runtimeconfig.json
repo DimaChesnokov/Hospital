@@ -6,8 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Максим\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Максим\\.nuget\\packages",
+      "C:\\Users\\Huawei\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Huawei\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
