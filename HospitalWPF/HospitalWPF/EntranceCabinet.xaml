@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HospitalWPF"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="EntranceCabinet" Height="600" Width="900">
+        Title="EntranceCabinet" Height="600" Width="900" MinWidth="1000" MinHeight="600">
     <Grid Background="#dff7f7">
         <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="500" CornerRadius="20" >
             <Border.Effect>
@@ -16,7 +16,7 @@
                 <TextBlock Text="Вход в личный кабинет" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
                 <Grid Margin="0 0 0 20">
                 </Grid>
-                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF6C40BA"></TextBox>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="     Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF6C40BA"></TextBox>
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFilledPasswordBox}" Background="Transparent"></PasswordBox>
                 
                 <Button Content="Авторизоваться" Margin="0 20" Background="#FFF60D0D" FontSize="14" Click="Button_Entry_Click" ></Button>
