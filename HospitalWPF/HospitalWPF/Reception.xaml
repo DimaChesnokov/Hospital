@@ -8,26 +8,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Reception" Height="450" Width="476" MinWidth="480" MinHeight="550">
     <Grid Background="#dff7f7" Margin="0,0,0,-43">
-        <Border  BorderThickness="1" HorizontalAlignment="Center" Height="457" VerticalAlignment="Top" Width="440" CornerRadius="20" Margin="0,27,0,0">
-            <Border.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="-53.13" CenterX="0.5" CenterY="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FFA2EAFB" Offset="0.983"/>
-                    <GradientStop Color="#FFF9F9F9" Offset="0.035"/>
-                </LinearGradientBrush>
-            </Border.Background>
+        <Border  BorderThickness="1" HorizontalAlignment="Center" Height="457" VerticalAlignment="Top" Width="440" CornerRadius="20" Margin="0,27,0,0" Background="White">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
             </Border.Effect>
             <Canvas HorizontalAlignment="Center" Height="456" VerticalAlignment="Center" Width="440">
-                <Label Content="Запись:" Canvas.Left="29" Canvas.Top="25" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#DD000000"/>
+                <Label Content="Запись" Canvas.Left="21" Canvas.Top="17" FontSize="30" FontWeight="Bold" Foreground="#FF000000"/>
                 <Label Content="Выбор услуги:" Canvas.Left="19" Canvas.Top="78" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <ComboBox Name="ComboBoxSelection" Canvas.Left="171" Canvas.Top="119" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" SelectedIndex="0" IsSynchronizedWithCurrentItem="False"/>
                 <ComboBox Name="ComboBoxSelectService" Canvas.Left="171" Canvas.Top="78" Width="220" FontSize="20" HorizontalAlignment="Left" SelectionChanged="ComboBoxSelectService_SelectionChanged">
@@ -42,7 +28,7 @@
                 <ComboBox Canvas.Left="171" Canvas.Top="201" Width="220" FontSize="20" SelectedIndex="0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <RichTextBox Height="100" Width="400" Canvas.Top="291" Canvas.Left="19" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFF7F7F7">
                     <RichTextBox.Effect>
-                        <DropShadowEffect Color="#FF28AFDC" ShadowDepth="5" BlurRadius="13"></DropShadowEffect>
+                        <DropShadowEffect Color="#FFD5F1F3" ShadowDepth="5" BlurRadius="13"></DropShadowEffect>
                     </RichTextBox.Effect>
                     <FlowDocument>
                         <Paragraph>
@@ -51,16 +37,8 @@
                     </FlowDocument>
                 </RichTextBox>
                 <Label Content="Опишите проблему:" Canvas.Left="19" Canvas.Top="251" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Content="Подтвердить запись" Canvas.Left="19" Canvas.Top="405" HorizontalAlignment="Left" VerticalAlignment="Center" Width="400" Background="#FF76DED2" BorderBrush="#FF1D82D0" Foreground="Black">
-                    <Button.Effect>
-                        <DropShadowEffect Color="#FF28AFDC" ShadowDepth="5" BlurRadius="13"/>
-                    </Button.Effect>
-                </Button>
-                <Button Content="Назад" Canvas.Left="344" Canvas.Top="17" Width="75" Background="#FFFF6859" BorderBrush="#FF1D82D0" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Button.Effect>
-                        <DropShadowEffect Color="#FF28AFDC" ShadowDepth="5" BlurRadius="13"/>
-                    </Button.Effect>
-                </Button>
+                <Button Content="Подтвердить запись" Canvas.Left="19" Canvas.Top="405" HorizontalAlignment="Left" VerticalAlignment="Center" Width="400" Background="#FFF60D0D" BorderBrush="#FF673AB7" Foreground="#DDFFFFFF"/>
+                <Button Content="Назад" Canvas.Left="340" Canvas.Top="32" Width="75" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D"/>
             </Canvas>
         </Border>
     </Grid>
