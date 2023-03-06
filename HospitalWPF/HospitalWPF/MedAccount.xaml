@@ -13,6 +13,7 @@
                 <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
             </Border.Effect>
             <Canvas Margin="-200,-200,-200,-200">
+                <Button Content="Назад" Canvas.Left="780" Canvas.Top="32" Width="90" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_Back" Height="40"  />
                 <Image Source="https://img.freepik.com/premium-vector/online-doctor-concept_23-2148522555.jpg?w=2000"  Height="120"  Width="120" Margin="-200,-204,50,54" Canvas.Left="220" Canvas.Top="233" />
                 <TextBlock Text="Имя Фамилия Отчество" FontSize="30" FontWeight="Bold" Margin="532,167,267,387" Canvas.Left="-355" Canvas.Top="-115" Foreground="Black"/>
                 <TextBlock Text="Профессия" FontSize="22"  Margin="532,167,267,387" Canvas.Left="-355" Canvas.Top="-50" Foreground="Black"/>

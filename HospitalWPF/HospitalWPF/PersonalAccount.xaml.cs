@@ -49,7 +49,20 @@ namespace HospitalWPF
 
         private void TextBoxSave_Click(object sender, RoutedEventArgs e)
         {
+            textBoxName.IsEnabled = false;
+            textBoxFullName.IsEnabled = false;
+            textBoxPatronymic.IsEnabled = false;
+            textBoxAge.IsEnabled = false;
+            textBoxGender.IsEnabled = false;
+            TextBoxSave.IsEnabled = false;
+            TextBoxEdit.IsEnabled = true;
+        }
 
+        private void Button_Click_Doctor(object sender, RoutedEventArgs e)
+        {
+            MedAccount medAccount = new MedAccount();
+            medAccount.Show();
+            Close();
         }
     }
 }
