@@ -20,6 +20,12 @@ namespace HospitalWPF
         public PersonalAccount()
         {
             InitializeComponent();
+            textBoxName.IsEnabled = false;
+            textBoxFullName.IsEnabled = false;
+            textBoxPatronymic.IsEnabled = false;
+            textBoxAge.IsEnabled = false;
+            textBoxGender.IsEnabled = false;
+            TextBoxSave.IsEnabled = false;
         }
 
         private void Button_Click_Reception(object sender, RoutedEventArgs e)
@@ -28,6 +34,22 @@ namespace HospitalWPF
             reception.Show();
             Close();
             
+        }
+
+        private void Button_Click_Edit(object sender, RoutedEventArgs e)
+        {
+            textBoxName.IsEnabled = true;
+            textBoxFullName.IsEnabled = true;
+            textBoxPatronymic.IsEnabled = true;
+            textBoxAge.IsEnabled = true;
+            textBoxGender.IsEnabled = true;
+            TextBoxSave.IsEnabled = true;
+            TextBoxEdit.IsEnabled = false;
+        }
+
+        private void TextBoxSave_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
