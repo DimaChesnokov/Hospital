@@ -23,7 +23,7 @@ namespace HospitalWPF
     {
 
         //ApplicationContext db;
-        //DataBase database = new DataBase();
+        DataBase database = new DataBase();
         public MainWindow()
         {
             InitializeComponent();

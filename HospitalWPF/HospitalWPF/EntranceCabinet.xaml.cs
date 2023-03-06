@@ -29,7 +29,7 @@ namespace HospitalWPF
         }
         //ApplicationContext db;
 
-        //DataBase dataBase = new DataBase();
+        DataBase dataBase = new DataBase();
         private void Button_Entry_Click(object sender, RoutedEventArgs e)
         {
             String login = textBoxLogin.Text.Trim();
@@ -55,29 +55,30 @@ namespace HospitalWPF
                 passBox.Background = Brushes.Transparent;
 
 
-                //SqlDataAdapter adapter = new SqlDataAdapter();
-                //DataTable table = new DataTable();
-                //string querystring = $"select id_user, login_user, password_user from register where login_user = '{login}' and password_user = '{pass}' ";
-                //SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
-                //adapter.SelectCommand = command;
-                //adapter.Fill(table);
-                
-                //if(table.Rows.Count == 1)
-                //{
-                //    MessageBox.Show("Успешный вход");
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                DataTable table = new DataTable();
+                string querystring = $"select  login, password from users where login = '{login}' and password = '{pass}' ";
+                SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
 
-                //    PersonalAccount personalAccount = new PersonalAccount();
-                //    //personalAccount.Show();
-                //    //this.Hide();
-                //    //personalAccount.ShowDialog();
-                //    //this.Show();
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Такого пользователя не существует");
-                //}
+                if (table.Rows.Count == 1)
+                {
+                    MessageBox.Show("Успешный вход");
 
-               
+                    PersonalAccount personalAccount = new PersonalAccount();
+                    personalAccount.Show();
+                    Close();
+                    //this.Hide();
+                    //personalAccount.ShowDialog();
+                    //this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Такого пользователя не существует");
+                }
+
+
                 User EntryUser = null;
 
 
