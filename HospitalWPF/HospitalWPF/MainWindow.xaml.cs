@@ -28,11 +28,12 @@ namespace HospitalWPF
         {
             InitializeComponent();
             //db = new ApplicationContext();
+            
 
 
             //List<User> user = db.Users.ToList();
         }
-
+       
 
         //Регистрация
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -92,8 +93,10 @@ namespace HospitalWPF
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //EntranceCabinet entranceCabinet = new EntranceCabinet();
-            //entranceCabinet.Show();
+          
+            EntranceCabinet entranceCabinet = new EntranceCabinet();
+            entranceCabinet.Show();
+            Close();
             //Hide();
         }
     }

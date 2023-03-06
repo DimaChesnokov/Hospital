@@ -21,5 +21,13 @@ namespace HospitalWPF
         {
             InitializeComponent();
         }
+
+        private void Button_Click_Reception(object sender, RoutedEventArgs e)
+        {
+            Reception reception = new Reception();
+            reception.Show();
+            Close();
+            
+        }
     }
 }

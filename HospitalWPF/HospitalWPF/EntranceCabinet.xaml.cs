@@ -93,5 +93,12 @@ namespace HospitalWPF
                 //}
             }
         }
+
+        private void Button_Click_Register(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
+        }
     }
 }

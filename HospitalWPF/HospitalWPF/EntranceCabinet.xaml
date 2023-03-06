@@ -14,11 +14,15 @@
             </Border.Effect>
             <StackPanel>
                 <TextBlock Text="Вход в личный кабинет" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                <Grid Margin="0 0 0 -10">
+
+                    <Button HorizontalAlignment="Left" Content="Регистрация"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FFF60D0D" Height="32" Margin="294,0,0,0" VerticalAlignment="Center"   Cursor="Hand"  Click="Button_Click_Register" Width="126" RenderTransformOrigin="-5.429,3.07" ></Button>
+                </Grid>
                 <Grid Margin="0 0 0 20">
                 </Grid>
                 <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="     Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF6C40BA"></TextBox>
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFilledPasswordBox}" Background="Transparent"></PasswordBox>
-                
+
                 <Button Content="Авторизоваться" Margin="0 20" Background="#FFF60D0D" FontSize="14" Click="Button_Entry_Click" ></Button>
 
             </StackPanel>

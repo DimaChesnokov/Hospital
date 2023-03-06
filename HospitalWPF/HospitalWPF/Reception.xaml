@@ -38,7 +38,7 @@
                 </RichTextBox>
                 <Label Content="Опишите проблему:" Canvas.Left="19" Canvas.Top="251" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Button Content="Подтвердить запись" Canvas.Left="19" Canvas.Top="405" HorizontalAlignment="Left" VerticalAlignment="Center" Width="400" Background="#FFF60D0D" BorderBrush="#FF673AB7" Foreground="#DDFFFFFF"/>
-                <Button Content="Назад" Canvas.Left="340" Canvas.Top="32" Width="75" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D"/>
+                <Button Content="Назад" Canvas.Left="340" Canvas.Top="32" Width="75" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_Back"/>
             </Canvas>
         </Border>
     </Grid>

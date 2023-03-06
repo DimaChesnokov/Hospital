@@ -18,7 +18,7 @@
 
                     <Button HorizontalAlignment="Left" Content="Войти"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FFF60D0D" Height="32" Margin="348,0,0,0" VerticalAlignment="Bottom"   Cursor="Hand"  Click="Button_Click_1" > </Button>
                 </Grid>
-                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="    Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF6C40BA"></TextBox>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="    Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF6C40BA" Width="420"></TextBox>
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFilledPasswordBox}"  Background="Transparent" ></PasswordBox>
                 <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="     Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
                 <TextBox x:Name="textBoxAge" materialDesign:HintAssist.Hint="     Age" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
