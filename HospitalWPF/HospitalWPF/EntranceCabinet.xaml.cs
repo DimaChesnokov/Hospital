@@ -57,7 +57,7 @@ namespace HospitalWPF
 
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataTable table = new DataTable();
-                string querystring = $"select  login, password from users where login = '{login}' and password = '{pass}' ";
+                string querystring = $"select  email, password from users_db where email = '{login}' and password = '{pass}' ";
                 SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
                 adapter.SelectCommand = command;
                 adapter.Fill(table);

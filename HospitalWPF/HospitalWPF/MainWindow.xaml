@@ -16,12 +16,10 @@
                 <TextBlock Text="Регистрация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
                 <Grid Margin="0 0 0 20">
 
-                    <Button HorizontalAlignment="Left" Content="Войти"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FFF60D0D" Height="32" Margin="348,0,0,0" VerticalAlignment="Bottom"   Cursor="Hand"  Click="Button_Click_1" > </Button>
+                    <Button HorizontalAlignment="Left" Content="Войти"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FFF60D0D" Height="32" Margin="348,0,0,0" VerticalAlignment="Bottom"   Cursor="Hand"  Click="Button_Click_1" ></Button>
                 </Grid>
-                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="    Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF6C40BA" Width="420"></TextBox>
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="     Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFilledPasswordBox}"  Background="Transparent" ></PasswordBox>
-                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="     Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <TextBox x:Name="textBoxAge" materialDesign:HintAssist.Hint="     Age" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
                 <Button Content="Зарегистрироваться" Margin="0 20" Background="#FFF60D0D" FontSize="14" Click="Button_Click" Cursor="Hand" ></Button>
 
             </StackPanel>
