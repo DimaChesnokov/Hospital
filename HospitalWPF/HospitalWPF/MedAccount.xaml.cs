@@ -30,5 +30,12 @@ namespace HospitalWPF
             personalAccount.Show();
             Close();
         }
+
+        private void Button_Click_Next(object sender, RoutedEventArgs e)
+        {
+            MedDentist medDentist = new MedDentist();
+            medDentist.Show();
+            Close();
+        }
     }
 }
