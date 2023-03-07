@@ -49,57 +49,60 @@ namespace HospitalWPF
             //    textBoxLogin.ToolTip = "Ошибка!";
             //    textBoxLogin.Background = Brushes.Red;
             //}
-            //else if (pass.Length < 4)
-            //{
-            //    passBox.ToolTip = "Ошибка!";
-            //    passBox.Background = Brushes.Red;
-            //}
-            //else if (email.Length < 4 || !email.Contains("@") || !email.Contains(".") )
-            //{
-            //    textBoxEmail.ToolTip = "Ошибка!";
-            //    textBoxEmail.Background = Brushes.Red;  
-            //}
+             if (pass.Length < 4)
+            {
+                passBox.ToolTip = "Ошибка!";
+                passBox.Background = Brushes.Red;
+            }
+            else if (email.Length < 4 /*|| !email.Contains("@") || !email.Contains(".")*/)
+            {
+                textBoxEmail.ToolTip = "Ошибка!";
+                textBoxEmail.Background = Brushes.Red;
+            }
             //else if (Convert.ToInt32(age) <= 18)
             //{
             //    textBoxAge.ToolTip = "Ошибка!";
             //    textBoxAge.Background = Brushes.Red;
             //}
-            //else
-            //{
-            //    //пустые поля 
-            //    textBoxLogin.ToolTip = "";
-            //    textBoxLogin.Background = Brushes.Transparent;
+            else
+            {
+                //пустые поля 
+                //textBoxLogin.ToolTip = "";
+                //textBoxLogin.Background = Brushes.Transparent;
 
 
 
-            //    passBox.ToolTip = "";
-            //    passBox.Background = Brushes.Transparent;
+                passBox.ToolTip = "";
+                passBox.Background = Brushes.Transparent;
 
-            //    textBoxEmail.ToolTip = "";
-            //    textBoxEmail.Background = Brushes.Transparent;
-
-            //    textBoxAge.ToolTip = "Ошибка!";
-            //    textBoxAge.Background = Brushes.Transparent;
-
-            //    //User user = new User(login, email, pass, age);
-            //    //Обращаемся к табличке Users
-            //    //db.Users.Add(user);
-
-            //    //Сохраним объект в бд
-            //    //db.SaveChanges();
+                textBoxEmail.ToolTip = "";
+                textBoxEmail.Background = Brushes.Transparent;
 
 
-            //}
 
-            // User user = new User("",email, pass, "");
+
+                //textBoxAge.ToolTip = "Ошибка!";
+                //textBoxAge.Background = Brushes.Transparent;
+
+                //User user = new User(login, email, pass, age);
+                //Обращаемся к табличке Users
+                //db.Users.Add(user);
+
+                //Сохраним объект в бд
+                //db.SaveChanges();
+
+
+            }
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataBase dataBase = new DataBase();
             DataTable table = new DataTable();
-            string querystring = $"insert into users_db(email, password) values ('{email}', '{pass}')";
+            string querystring = $"insert into register_db(email, pass) values ('{email}', '{pass}')";
             SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
             MessageBox.Show("УСПЕШНАЯ РЕГИСТРАЦИЯ", "Успешно!");
+            // User user = new User("",email, pass, "");
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

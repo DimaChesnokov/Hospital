@@ -54,29 +54,32 @@ namespace HospitalWPF
                 passBox.ToolTip = "";
                 passBox.Background = Brushes.Transparent;
 
-
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataTable table = new DataTable();
-                string querystring = $"select  email, password from users_db where email = '{login}' and password = '{pass}' ";
+                string querystring = $"select  email, pass from register_db where email = '{login}' and pass = '{pass}' ";
                 SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
                 adapter.SelectCommand = command;
                 adapter.Fill(table);
+                MessageBox.Show("Успешный вход");
+                PersonalAccount personalAccount = new PersonalAccount();
+                personalAccount.Show();
+                Close();
 
-                if (table.Rows.Count == 1)
-                {
-                    MessageBox.Show("Успешный вход");
+                //if (table.Rows.Count == 1)
+                //{
+                //    MessageBox.Show("Успешный вход");
 
-                    PersonalAccount personalAccount = new PersonalAccount();
-                    personalAccount.Show();
-                    Close();
-                    //this.Hide();
-                    //personalAccount.ShowDialog();
-                    //this.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Такого пользователя не существует");
-                }
+                //    PersonalAccount personalAccount = new PersonalAccount();
+                //    personalAccount.Show();
+                //    Close();
+                //    //this.Hide();
+                //    //personalAccount.ShowDialog();
+                //    //this.Show();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Такого пользователя не существует");
+                //}
 
 
                 User EntryUser = null;

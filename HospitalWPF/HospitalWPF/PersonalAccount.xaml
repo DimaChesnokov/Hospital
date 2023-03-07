@@ -41,8 +41,8 @@
                 </Grid>
                 <TextBlock Text="Пользователь" FontSize="18" FontWeight="Bold" Margin="532,167,267,387" Canvas.Left="-54" Canvas.Top="-65" Foreground="Black"/>
                 <TextBlock Text="Личный кабинет" FontSize="30" FontWeight="Bold" Margin="319,93,320,452" Canvas.Left="-25" Canvas.Top="-80"/>
-                <Button Content="Записаться к врачу" Margin="523,443,127,109" Background="#FFF60D0D" FontSize="14" Cursor="Hand" Height="40" Width="250" Canvas.Left="-14" Canvas.Top="-75" BorderBrush="#FF673AB7" Click="Button_Click_Reception" />
-                <Button Content="Фотокарточка" Margin="678,188,72,246" Background="#FFCDCCCC" FontSize="14" Cursor="Hand" Width="150" Height="150" BorderBrush="#FF575757" Canvas.Left="-35" Canvas.Top="-70" />
+                <Button Content="Записаться к врачу" Margin="523,443,127,109" Background="#FFF60D0D" FontSize="17" Cursor="Hand" Height="40" Width="250" Canvas.Left="-14" Canvas.Top="-75" BorderBrush="#FF673AB7" Click="Button_Click_Reception" />
+                <Button Content="Фотокарточка" Margin="678,188,72,246" Background="#FFCDCCCC" FontSize="16" Cursor="Hand" Width="150" Height="150" BorderBrush="#FF575757" Canvas.Left="-35" Canvas.Top="-70" />
                 <Button x:Name="TextBoxEdit" Content="Редактировать" Margin="678,188,72,246" Background="#FFF0F0F0" FontSize="14" Cursor="Hand" Width="150" Height="30" BorderBrush="LightGray" Canvas.Left="-35" Canvas.Top="87" Foreground="#DD888888" Click="Button_Click_Edit" />
                 <Button x:Name="TextBoxSave" Content="Сохранить" Margin="520,188,72,246" Background="#FFF0F0F0" FontSize="14" Cursor="Hand" Width="150" Height="30" BorderBrush="LightGray" Canvas.Left="-35" Canvas.Top="87" Foreground="#DD888888" Click="TextBoxSave_Click" />
                 <Border MinWidth="250" Margin="35,0,35,0" Padding="50" MaxWidth="0" CornerRadius="20" Width="213" Height="220" RenderTransformOrigin="0.511,0.52" Canvas.Top="107" Canvas.Left="41">
