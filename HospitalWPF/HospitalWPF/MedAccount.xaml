@@ -13,8 +13,8 @@
                 <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
             </Border.Effect>
             <Canvas Margin="-200,-200,-200,-200">
-                <Button Content="Личный кабинет" Canvas.Left="703" Canvas.Top="32" Width="185" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_Back" Height="40" FontSize="18"  />
-                <Button x:Name="ButtonNext" Content="Далее" Canvas.Left="778" Canvas.Top="69" Width="90" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_Next" Height="40" FontSize="18"  />
+                <Button Content="Личный кабинет" Canvas.Left="695" Canvas.Top="32" Width="187" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_Back" Height="40" FontSize="18"  />
+                <Button x:Name="ButtonNext" Content="Далее" Canvas.Left="776" Canvas.Top="69" Width="90" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_Next" Height="40" FontSize="18"  />
                 <Image Source="https://img.freepik.com/premium-vector/online-doctor-concept_23-2148522555.jpg?w=2000"  Height="120"  Width="120" Margin="-200,-204,50,54" Canvas.Left="220" Canvas.Top="233" />
                 <TextBlock x:Name="NameDoctor" Text="Пыжова Наталья Владимировна" FontSize="30" FontWeight="Bold" Margin="532,167,267,387" Canvas.Left="-355" Canvas.Top="-115" Foreground="Black"/>
                 <TextBlock Text="Хирург" FontSize="22"  Margin="532,167,267,387" Canvas.Left="-355" Canvas.Top="-50" Foreground="Black"/>
