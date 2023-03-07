@@ -25,7 +25,7 @@
                 <DatePicker Canvas.Left="171" Canvas.Top="165" VerticalAlignment="Top" RenderTransformOrigin="0.442,0.633" FontSize="20" HorizontalAlignment="Center"/>
                 <Label Content="Время:" Canvas.Left="19" Canvas.Top="202" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <ComboBox Canvas.Left="171" Canvas.Top="201" Width="220" FontSize="20" SelectedIndex="0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <RichTextBox Height="100" Width="400" Canvas.Top="291" Canvas.Left="19" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFF7F7F7" FontSize="18">
+                <RichTextBox Height="100" Width="400" Canvas.Top="291" Canvas.Left="19" HorizontalAlignment="Left" BorderBrush="Black" Foreground="Black" VerticalAlignment="Center" Background="White" FontSize="18" CaretBrush="Black" SelectionBrush="#FF0C0C0C" SelectionTextBrush="#FF151313">
                     <RichTextBox.Effect>
                         <DropShadowEffect Color="#FFD5F1F3" ShadowDepth="5" BlurRadius="13"></DropShadowEffect>
                     </RichTextBox.Effect>
