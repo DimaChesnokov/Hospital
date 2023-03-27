@@ -96,8 +96,11 @@ namespace HospitalWPF
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataBase dataBase = new DataBase();
             DataTable table = new DataTable();
-            string querystring = $"insert into register_db(email, pass) values ('{email}', '{pass}')";
+            string querystring = $"insert into personal_account(name) values ('d')"; 
             SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
+            adapter.SelectCommand = command;
+            querystring = $"insert into users(login, password) values ('{email}', '{pass}')";
+            command = new SqlCommand(querystring, dataBase.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
             MessageBox.Show("УСПЕШНАЯ РЕГИСТРАЦИЯ", "Успешно!");

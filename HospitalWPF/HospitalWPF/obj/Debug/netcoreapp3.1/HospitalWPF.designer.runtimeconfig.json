@@ -6,9 +6,10 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\dcdim\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\dcdim\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\я\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\я\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

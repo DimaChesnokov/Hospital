@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\
+C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\
 HospitalWPF
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\GitHub\Hospital\HospitalWPF\HospitalWPF\App.xaml
+C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\App.xaml
 6-1135778974
 
 13-1083840411
-200566702917
+200-664762994
 EntranceCabinet.xaml;MainWindow.xaml;MedAccount.xaml;MedDentist.xaml;PersonalAccount.xaml;Reception.xaml;
 
 True

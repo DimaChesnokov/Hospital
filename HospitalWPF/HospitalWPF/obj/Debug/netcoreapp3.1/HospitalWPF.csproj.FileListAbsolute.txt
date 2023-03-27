@@ -232,3 +232,5 @@ C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\Hospi
 C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\HospitalWPF.genruntimeconfig.cache
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.g.cs
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.baml
+C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.g.cs
+C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.baml
