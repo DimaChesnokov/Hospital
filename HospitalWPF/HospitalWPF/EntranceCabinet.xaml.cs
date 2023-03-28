@@ -30,6 +30,9 @@ namespace HospitalWPF
         //ApplicationContext db;
 
         DataBase dataBase = new DataBase();
+        public  static int i;
+
+        
         private void Button_Entry_Click(object sender, RoutedEventArgs e)
         {
             String login = textBoxLogin.Text.Trim();
@@ -41,7 +44,7 @@ namespace HospitalWPF
                 textBoxLogin.ToolTip = "Ошибка!";
                 textBoxLogin.Background = Brushes.Red;
             }
-            else if (pass.Length < 4)
+            else if (pass.Length < 3)
             {
                 passBox.ToolTip = "Ошибка!";
                 passBox.Background = Brushes.Red;
@@ -56,10 +59,21 @@ namespace HospitalWPF
 
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 DataTable table = new DataTable();
-                string querystring = $"select  login, password from users where login = '{login}' and password = '{pass}' ";
+                dataBase.oppenConnection();
+
+                string querystring = $"select id from users where login = '{login}' and password = '{pass}' ";
                 SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
-                adapter.SelectCommand = command;
-                adapter.Fill(table);
+                SqlDataReader reader = command.ExecuteReader();
+                var u = reader.GetName(0);
+                reader.Read();
+                i = reader.GetInt32(0);
+                
+
+                
+                //command = new SqlCommand(querystring, dataBase.GetConnection());
+                //adapter.SelectCommand = command;
+                //reader.Close();
+                //adapter.Fill(table);
                 MessageBox.Show("Успешный вход");
                 PersonalAccount personalAccount = new PersonalAccount();
                 personalAccount.Show();

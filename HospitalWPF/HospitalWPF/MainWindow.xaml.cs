@@ -17,19 +17,22 @@ using System.Data;
 
 namespace HospitalWPF
 {
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int dd;
 
         //ApplicationContext db;
         DataBase database = new DataBase();
+        
         public MainWindow()
         {
             InitializeComponent();
             //db = new ApplicationContext();
-            
+            //database.oppenConnection();
 
 
             //List<User> user = db.Users.ToList();
@@ -44,11 +47,7 @@ namespace HospitalWPF
             String email = textBoxEmail.Text.Trim().ToLower();
             //String age = textBoxAge.Text.Trim();
 
-            //if (login.Length < 3)
-            //{
-            //    textBoxLogin.ToolTip = "Ошибка!";
-            //    textBoxLogin.Background = Brushes.Red;
-            //}
+            
              if (pass.Length < 4)
             {
                 passBox.ToolTip = "Ошибка!";
@@ -80,29 +79,21 @@ namespace HospitalWPF
 
 
 
-
-                //textBoxAge.ToolTip = "Ошибка!";
-                //textBoxAge.Background = Brushes.Transparent;
-
-                //User user = new User(login, email, pass, age);
-                //Обращаемся к табличке Users
-                //db.Users.Add(user);
-
-                //Сохраним объект в бд
-                //db.SaveChanges();
-
-
             }
+            string f = "dimon";
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataBase dataBase = new DataBase();
             DataTable table = new DataTable();
-            string querystring = $"insert into personal_account(name) values ('d')"; 
+
+            string querystring = ""; 
             SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
-            adapter.SelectCommand = command;
+          
             querystring = $"insert into users(login, password) values ('{email}', '{pass}')";
             command = new SqlCommand(querystring, dataBase.GetConnection());
             adapter.SelectCommand = command;
-            adapter.Fill(table);
+            adapter.Fill(table);    
+            
+
             MessageBox.Show("УСПЕШНАЯ РЕГИСТРАЦИЯ", "Успешно!");
             // User user = new User("",email, pass, "");
 
