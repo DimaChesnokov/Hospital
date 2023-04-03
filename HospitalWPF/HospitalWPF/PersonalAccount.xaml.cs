@@ -20,10 +20,11 @@ namespace HospitalWPF
     public partial class PersonalAccount : Window
     {
         DataBase database = new DataBase();
+        public int b = EntranceCabinet.i;
         public PersonalAccount()
         {
             InitializeComponent();
-            var b = EntranceCabinet.i;
+            
             textBoxName.IsEnabled = false;
             textBoxFullName.IsEnabled = false;
             textBoxPatronymic.IsEnabled = false;
@@ -34,13 +35,47 @@ namespace HospitalWPF
             //нужно вносить заранее что-то сюда, null не подойдёт.
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            int age = 0;
-            string sql = $"Update users set name ='',f_name ='',o_name ='', age = '{age}', gender = '' where id ='{b}'";
-            //string querystring = $"select  from users name = '{textBoxName}' and f_name = '{textBoxFullName}' and o_name = '{textBoxPatronymic}' and age = '{textBoxAge}'  and age = '{ textBoxGender}' ";
-            SqlCommand command = new SqlCommand(sql, database.GetConnection());
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-            
+            database.oppenConnection();
+            //string sql = $"Update users set name ='',f_name ='',o_name ='', age = '{age}', gender = '' where id ='{b}'";
+
+            //Имя
+            string sqlName = $"SELECT name FROM users where id ='{b}'";
+            SqlCommand commandName = new SqlCommand(sqlName, database.GetConnection());
+            SqlDataReader readerName = commandName.ExecuteReader();
+            if (readerName.Read())
+                textBoxName.Text = readerName.GetString(0);
+            readerName.Close();
+
+            string sqlFullName = $"SELECT f_name FROM users where id ='{b}'";
+            SqlCommand commandFullName = new SqlCommand(sqlFullName, database.GetConnection());
+            SqlDataReader readerFullName = commandFullName.ExecuteReader();
+            if (readerFullName.Read())
+                textBoxFullName.Text = readerFullName.GetString(0);
+            readerFullName.Close();
+
+            string sqlPatronymic = $"SELECT o_name FROM users where id ='{b}'";
+            SqlCommand commandPatronymic = new SqlCommand(sqlPatronymic, database.GetConnection());
+            SqlDataReader readerPatronymic = commandPatronymic.ExecuteReader();
+            if (readerPatronymic.Read())
+                textBoxPatronymic.Text = readerPatronymic.GetString(0);
+            readerPatronymic.Close();
+
+
+            string sqlAge = $"SELECT Age FROM users where id ='{b}'";
+            SqlCommand commandAge = new SqlCommand(sqlAge, database.GetConnection());
+            SqlDataReader readerAge = commandAge.ExecuteReader();
+            if (readerAge.Read())
+                textBoxAge.Text = Convert.ToString(readerAge.GetInt32(0));
+            readerAge.Close();
+
+            string sqlGender = $"SELECT gender FROM users where id ='{b}'";
+            SqlCommand commandGender = new SqlCommand(sqlGender, database.GetConnection());
+            SqlDataReader readerGender = commandGender.ExecuteReader();
+            if (readerGender.Read())
+                textBoxGender.Text = readerGender.GetString(0);
+            readerGender.Close();
+
+
         }
         
 
@@ -62,17 +97,12 @@ namespace HospitalWPF
             TextBoxSave.IsEnabled = true;
             TextBoxEdit.IsEnabled = false;
 
+            
 
-            //SqlDataAdapter adapter = new SqlDataAdapter();
-            //DataBase dataBase = new DataBase();
-            //DataTable table = new DataTable();
-            ////string querystring = $"insert into personal_account(name) values ('d')";
-            //SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
-            //adapter.SelectCommand = command;
-            //string querystring = $"insert into users(login, password) values ('{email}', '{pass}')";
-            //command = new SqlCommand(querystring, dataBase.GetConnection());
-            //adapter.SelectCommand = command;
-            //adapter.Fill(table);
+
+
+
+
         }
 
         private void TextBoxSave_Click(object sender, RoutedEventArgs e)
@@ -84,6 +114,19 @@ namespace HospitalWPF
             textBoxGender.IsEnabled = false;
             TextBoxSave.IsEnabled = false;
             TextBoxEdit.IsEnabled = true;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+            int age;
+            if (textBoxAge.Text != "")
+                age = Convert.ToInt32(textBoxAge.Text);
+            else
+                age = 0;
+            string sql = $"Update users set name ='{textBoxName.Text}',f_name ='{textBoxFullName.Text}',o_name ='{textBoxPatronymic.Text}', age = '{age}', " +
+                $"gender = '{textBoxGender.Text}' where id ='{b}'";
+            SqlCommand command = new SqlCommand(sql, database.GetConnection());
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            //textBoxName.Text = "";
         }
 
         private void Button_Click_Doctor(object sender, RoutedEventArgs e)
