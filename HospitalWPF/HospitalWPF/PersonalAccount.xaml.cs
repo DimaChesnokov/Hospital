@@ -36,8 +36,11 @@ namespace HospitalWPF
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
             database.oppenConnection();
-            //string sql = $"Update users set name ='',f_name ='',o_name ='', age = '{age}', gender = '' where id ='{b}'";
-
+            int age = 0;
+            string sql = $"Update users set name ='',f_name ='',o_name ='', age = '{age}', gender = '' where id ='{b}'";
+            SqlCommand command = new SqlCommand(sql, database.GetConnection());
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
             //Имя
             string sqlName = $"SELECT name FROM users where id ='{b}'";
             SqlCommand commandName = new SqlCommand(sqlName, database.GetConnection());
