@@ -88,7 +88,7 @@ namespace HospitalWPF
             string querystring = ""; 
             SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
           
-            querystring = $"insert into users(login, password) values ('{email}', '{pass}')";
+            querystring = $"insert into users(login, password,name,f_name,o_name,age,gender) values ('{email}', '{pass}','','','','{0}','')";
             command = new SqlCommand(querystring, dataBase.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);    

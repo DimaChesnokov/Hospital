@@ -20,6 +20,8 @@ namespace HospitalWPF
         public Reception()
         {
             InitializeComponent();
+            //ComboBoxSelection.Items.Add("Соколов Александр Иванович"); 
+            //ComboBoxSelection.Items.Add("Пыжова Наталья Владимировна");
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

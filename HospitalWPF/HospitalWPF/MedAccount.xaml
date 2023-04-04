@@ -50,13 +50,14 @@
                         <TextBlock Text="СБ" TextAlignment="Center" FontSize="14" Grid.Column="5" Margin="0,3"/>
                         <TextBlock Text="ВС" TextAlignment="Center" FontSize="14" Grid.Column="6" Margin="0,3"/>
 
-                        <TextBlock Text="27.02" TextAlignment="Center" FontSize="14" Grid.Column="0" Grid.Row="1" Margin="0,3"/>
-                        <TextBlock Text="28.02" TextAlignment="Center" FontSize="14" Grid.Column="1" Grid.Row="1" Margin="0,3"/>
-                        <TextBlock Text="01.03" TextAlignment="Center" FontSize="14" Grid.Column="2" Grid.Row="1" Margin="0,3"/>
-                        <TextBlock Text="02.03" TextAlignment="Center" FontSize="14" Grid.Column="3" Grid.Row="1" Margin="0,3"/>
-                        <TextBlock Text="04.03" TextAlignment="Center" FontSize="14" Grid.Column="4" Grid.Row="1" Margin="0,3"/>
-                        <TextBlock Text="05.03" TextAlignment="Center" FontSize="14" Grid.Column="5" Grid.Row="1" Margin="0,3"/>
-                        <TextBlock Text="06.03" TextAlignment="Center" FontSize="14" Grid.Column="6" Grid.Row="1" Margin="0,3"/>
+                        <TextBlock Text="03.04" TextAlignment="Center" FontSize="14" Grid.Column="0" Grid.Row="1" Margin="0,3"/>
+                        <TextBlock Text="04.04" TextAlignment="Center" FontSize="14" Grid.Column="1" Grid.Row="1" Margin="0,3"/>
+                        <TextBlock Text="05.04" TextAlignment="Center" FontSize="14" Grid.Column="2" Grid.Row="1" Margin="0,3"/>
+                        <TextBlock Text="06.04" TextAlignment="Center" FontSize="14" Grid.Column="3" Grid.Row="1" Margin="0,3"/>
+                        <TextBlock Text="07.04" TextAlignment="Center" FontSize="14" Grid.Column="4" Grid.Row="1" Margin="0,3"/>
+                        <TextBlock Text="09.04" TextAlignment="Center" FontSize="14" Grid.Column="5" Grid.Row="1" Margin="0,3"/>
+                        <TextBlock Text="09.04" TextAlignment="Center" FontSize="14" Grid.Column="6" Grid.Row="1" Margin="0,3"/>
+
 
                         <TextBlock Text="14:00 - 21:00" TextAlignment="Center" FontSize="14" Grid.Column="0" Grid.Row="2" Margin="10,3"/>
                         <TextBlock Text="14:00 - 21:00" TextAlignment="Center" FontSize="14" Grid.Column="1" Grid.Row="2" Margin="10,3"/>
