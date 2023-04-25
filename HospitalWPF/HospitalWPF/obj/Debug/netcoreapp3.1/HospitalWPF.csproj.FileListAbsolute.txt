@@ -234,3 +234,9 @@ D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.g.
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.baml
 C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.g.cs
 C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.baml
+C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.g.cs
+C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.baml
+C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\CurrentDesiese.g.cs
+C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\CurrentDesiese.baml
+C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\RecordDesiese.g.cs
+C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\RecordDesiese.baml

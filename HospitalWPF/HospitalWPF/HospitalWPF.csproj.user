@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="CurrentDesiese.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="EntranceCabinet.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,8 +25,14 @@
     <Compile Update="Reception.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="RecordDesiese.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="CurrentDesiese.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="EntranceCabinet.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -40,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Reception.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RecordDesiese.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

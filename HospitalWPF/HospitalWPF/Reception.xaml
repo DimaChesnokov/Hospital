@@ -22,10 +22,10 @@
                 </ComboBox>
                 <Label Name="LabelService" Content="Врач:" Canvas.Left="19" Canvas.Top="121" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" AutomationProperties.Name="LabelService"/>
                 <Label Content="Дата:" Canvas.Left="19" Canvas.Top="161" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <DatePicker Canvas.Left="171" Canvas.Top="165" VerticalAlignment="Top" RenderTransformOrigin="0.442,0.633" FontSize="20" HorizontalAlignment="Center"/>
+                <DatePicker x:Name="dataPicker1" Canvas.Left="171" Canvas.Top="165" VerticalAlignment="Top" RenderTransformOrigin="0.442,0.633" FontSize="20" HorizontalAlignment="Center" AutomationProperties.Name="dataPicker1" SelectedDateChanged="dataPicker1_SelectedDateChanged"/>
                 <Label Content="Время:" Canvas.Left="19" Canvas.Top="202" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <ComboBox Canvas.Left="171" Canvas.Top="201" Width="220" FontSize="20" SelectedIndex="0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <RichTextBox Height="100" Width="400" Canvas.Top="291" Canvas.Left="19" HorizontalAlignment="Left" BorderBrush="Black" Foreground="Black" VerticalAlignment="Center" Background="White" FontSize="18" CaretBrush="Black" SelectionBrush="#FF0C0C0C" SelectionTextBrush="#FF151313">
+                <ComboBox x:Name="ComboBox_Time" Canvas.Left="171" Canvas.Top="201" Width="220" FontSize="20" SelectedIndex="0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <RichTextBox x:Name="problem1" Height="100" Width="400" Canvas.Top="291" Canvas.Left="19" HorizontalAlignment="Left" BorderBrush="Black" Foreground="Black" VerticalAlignment="Center" Background="White" FontSize="18" CaretBrush="Black" SelectionBrush="#FF0C0C0C" SelectionTextBrush="#FF151313">
                     <RichTextBox.Effect>
                         <DropShadowEffect Color="#FFD5F1F3" ShadowDepth="5" BlurRadius="13"></DropShadowEffect>
                     </RichTextBox.Effect>
@@ -36,7 +36,7 @@
                     </FlowDocument>
                 </RichTextBox>
                 <Label Content="Опишите проблему:" Canvas.Left="19" Canvas.Top="251" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Content="Подтвердить запись" Canvas.Left="19" Canvas.Top="405" HorizontalAlignment="Left" VerticalAlignment="Center" Width="400" Background="#FFF60D0D" BorderBrush="#FF673AB7" Foreground="#DDFFFFFF"/>
+                <Button Content="Подтвердить запись" Canvas.Left="19" Canvas.Top="405" HorizontalAlignment="Left" VerticalAlignment="Center" Width="400" Background="#FFF60D0D" BorderBrush="#FF673AB7" Foreground="#DDFFFFFF" Click="Button_Click"/>
                 <Button Content="Назад" Canvas.Left="340" Canvas.Top="32" Width="75" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_Back"/>
             </Canvas>
         </Border>

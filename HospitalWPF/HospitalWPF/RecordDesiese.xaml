@@ -1,0 +1,22 @@
+﻿<Window x:Class="HospitalWPF.RecordDesiese"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalWPF"
+        mc:Ignorable="d"
+        Title="RecordDesiese" Height="600" Width="1000" MinWidth="1000" MinHeight="600">
+    <Grid Background="#dff7f7">
+        <Border MinWidth="500" Margin="50,0,50,0" Background="White" VerticalAlignment="Center" Padding="200" MaxWidth="900" CornerRadius="20" Height="489" RenderTransformOrigin="0.468,0.416" >
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <Canvas Margin="-200,-200,-200,-200">
+                <TextBlock Text="История записей" FontSize="30" FontWeight="Bold" Margin="319,93,320,452" Canvas.Left="25" Canvas.Top="-66"/>
+                <Button Content="Личный кабинет" Canvas.Left="648" Canvas.Top="415" Width="187" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_1" Height="40" FontSize="18"  />
+                <DataGrid x:Name="DataGridRecord1" Height="300" Width="832" Canvas.Top="95" Canvas.Left="25"/>
+
+            </Canvas>
+        </Border>
+    </Grid>
+</Window>

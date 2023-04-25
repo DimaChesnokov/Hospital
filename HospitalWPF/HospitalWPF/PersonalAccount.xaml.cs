@@ -78,16 +78,55 @@ namespace HospitalWPF
                 textBoxGender.Text = readerGender.GetString(0);
             readerGender.Close();
 
-
+            database.oppenConnection();
+            string querystring = $"select count(id) from recordset where id_user ='{b}' and dataserv < '{DateTime.Today}'";
+            SqlCommand command = new SqlCommand(querystring, database.GetConnection());
+            SqlDataReader reader = command.ExecuteReader();
+            //var u = reader.GetName(0);
+            reader.Read();
+            int count = reader.GetInt32(0);
+            reader.Close();
+            if (count != 0)
+            {
+                OldDataSet();
+            }
         }
-        
 
+        private void OldDataSet()
+        {
+            database.oppenConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataBase dataBase = new DataBase();
+            DataTable table = new DataTable();
+            string querystring = "";
+            SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
+            querystring = $"insert into recordsetold (id_user, servies, secondservies, dataserv, timeserv, problem) select id_user, servies, secondservies, dataserv, timeserv, problem from recordset where id_user ='{b}' and dataserv < '{DateTime.Today}'";
+            command = new SqlCommand(querystring, dataBase.GetConnection());
+            adapter.SelectCommand = command;
+
+            adapter.Fill(table);
+            OldDataDel();
+        }
+
+        private void OldDataDel()
+        {
+            database.oppenConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataBase dataBase = new DataBase();
+            DataTable table = new DataTable();
+            string querystring = "";
+            SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
+            querystring = $"delete from recordset where id_user ='{b}' and dataserv < '{DateTime.Today}' ";
+            command = new SqlCommand(querystring, dataBase.GetConnection());
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+        }
         private void Button_Click_Reception(object sender, RoutedEventArgs e)
         {
             Reception reception = new Reception();
             reception.Show();
-            Close();
-            
+            //Close();
+
         }
 
         private void Button_Click_Edit(object sender, RoutedEventArgs e)
@@ -136,6 +175,20 @@ namespace HospitalWPF
         {
             MedAccount medAccount = new MedAccount();
             medAccount.Show();
+            Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentDesiese curDisease = new CurrentDesiese();
+            curDisease.Show();
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            RecordDesiese RecDisease = new RecordDesiese();
+            RecDisease.Show();
             Close();
         }
     }
