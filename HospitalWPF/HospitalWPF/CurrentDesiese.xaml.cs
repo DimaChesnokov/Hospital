@@ -25,6 +25,7 @@ namespace HospitalWPF
         {
             i = EntranceCabinet.i;
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             //DataGridRecord.Columns[1].Header = "Услуга";
             //DataGridRecord.Columns[2].Header = "Врач/Услуга";
             //DataGridRecord.Columns[3].Header = "Дата";

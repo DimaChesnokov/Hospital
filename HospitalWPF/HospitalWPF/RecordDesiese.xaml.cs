@@ -25,6 +25,7 @@ namespace HospitalWPF
         {
             i = EntranceCabinet.i;
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             database.oppenConnection();
             SqlDataAdapter adapter = new SqlDataAdapter($"SELECT servies as 'Услуга', secondservies as 'Врач или Услуга', convert(varchar(10), dataserv, 120) AS 'Дата', timeserv As 'Время', problem as 'Проблема' FROM recordsetold where id_user ='{i}'", database.GetConnection());
             SqlCommandBuilder cb = new SqlCommandBuilder(adapter);

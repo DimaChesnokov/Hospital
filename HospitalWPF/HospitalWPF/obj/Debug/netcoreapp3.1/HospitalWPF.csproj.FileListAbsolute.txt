@@ -240,3 +240,7 @@ C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1
 C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\CurrentDesiese.baml
 C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\RecordDesiese.g.cs
 C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\RecordDesiese.baml
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\CurrentDesiese.g.cs
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\RecordDesiese.g.cs
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\CurrentDesiese.baml
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\RecordDesiese.baml

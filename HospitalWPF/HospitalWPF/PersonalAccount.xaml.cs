@@ -24,7 +24,7 @@ namespace HospitalWPF
         public PersonalAccount()
         {
             InitializeComponent();
-            
+            WindowState = WindowState.Maximized;
             textBoxName.IsEnabled = false;
             textBoxFullName.IsEnabled = false;
             textBoxPatronymic.IsEnabled = false;

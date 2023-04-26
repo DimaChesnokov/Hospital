@@ -33,6 +33,7 @@ namespace HospitalWPF
             InitializeComponent();
             //db = new ApplicationContext();
             //database.oppenConnection();
+            WindowState = WindowState.Maximized;
 
 
             //List<User> user = db.Users.ToList();

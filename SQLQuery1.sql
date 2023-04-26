@@ -1,23 +1,12 @@
 use hospital;
---CREATE TABLE recordsetold (
+--DROP TABLE MedAccount;
+--CREATE TABLE MedAccount (
 --id INT identity(1,1) PRIMARY KEY not null,
---id_user int,
---servies VARCHAR(50) ,
---secondservies VARCHAR(50),
---dataserv date,
---timeserv VARCHAR(50),
---problem varchar(256),
+--fullName_med VARCHAR(500) ,
+--spec VARCHAR(500),
+--bio VARCHAR(3000),
 --);
---SELECT  secondservies, servies, dataserv, timeserv FROM recordset where id_user =3;
---CREATE TABLE timebufer (
---id INT identity(1,1) PRIMARY KEY not null,
---dataserv date,
---timeserv VARCHAR(50),
---);
---delete from recordsetold 
---delete from recordset 
---delete from timebufer 
---delete from users
-select * from recordset ;
+insert into MedAccount(fullName_med, spec, bio) values ('Капылов Сергей Александрович','Стоматолог','Странный чел');
+select * from MedAccount;
 
 

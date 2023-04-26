@@ -25,7 +25,7 @@ namespace HospitalWPF
         public EntranceCabinet()
         {
             InitializeComponent();
-           
+            WindowState = WindowState.Maximized;
         }
         //ApplicationContext db;
 
