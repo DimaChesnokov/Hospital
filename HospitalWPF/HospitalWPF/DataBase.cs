@@ -7,7 +7,7 @@ namespace HospitalWPF
 {
     class DataBase
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=LAPTOP-KK6Q4DN0\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source="+ Environment.MachineName + @"\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True");
 
         public void oppenConnection()
         {

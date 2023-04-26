@@ -100,7 +100,7 @@ namespace HospitalWPF
             DataTable table = new DataTable();
             string querystring = "";
             SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
-            querystring = $"insert into recordsetold (id_user, servies, secondservies, dataserv, timeserv, problem) select id_user, servies, secondservies, dataserv, timeserv, problem from recordset where id_user ='{b}' and dataserv < '{DateTime.Today}'";
+            querystring = $"insert into recordsetold (id_user, servies, secondservies, nameDoc, dataserv, timeserv, problem) select id_user, servies, secondservies,nameDoc ,dataserv, timeserv, problem from recordset where id_user ='{b}' and dataserv < '{DateTime.Today}'";
             command = new SqlCommand(querystring, dataBase.GetConnection());
             adapter.SelectCommand = command;
 
@@ -125,7 +125,6 @@ namespace HospitalWPF
         {
             Reception reception = new Reception();
             reception.Show();
-            //Close();
 
         }
 
@@ -138,13 +137,6 @@ namespace HospitalWPF
             textBoxGender.IsEnabled = true;
             TextBoxSave.IsEnabled = true;
             TextBoxEdit.IsEnabled = false;
-
-            
-
-
-
-
-
         }
 
         private void TextBoxSave_Click(object sender, RoutedEventArgs e)
@@ -168,7 +160,6 @@ namespace HospitalWPF
             SqlCommand command = new SqlCommand(sql, database.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
-            //textBoxName.Text = "";
         }
 
         private void Button_Click_Doctor(object sender, RoutedEventArgs e)
@@ -190,6 +181,16 @@ namespace HospitalWPF
             RecordDesiese RecDisease = new RecordDesiese();
             RecDisease.Show();
             Close();
+        }
+
+        private void HelpButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Врачи- Здесь вы можете просмотреть врачей нашей больницы.\n" +
+    "История записей- Здесь вы можете просмотреть все свои записи, которые уже не активны на данный момент.\n" +
+    "Текущие записи- Здесь вы можете просмотреть все свои активные записи на данный момент.\n" +
+    "Кнопка 'Редактировать' позволит Вам редактировать информацию о себе\n" +
+    "Кнопка 'Сохранить' подверждает внесённые изменения.\n" +
+    "Кнопка 'Записаться к врачу' продоставляет записаться к интересующему вас в специалисту или процедуре в порядке электронной очереди.", "Справка");
         }
     }
 }

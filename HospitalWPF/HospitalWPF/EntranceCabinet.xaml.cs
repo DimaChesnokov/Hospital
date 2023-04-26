@@ -65,7 +65,6 @@ namespace HospitalWPF
                 string querystring = $"select count(id) from users where login = '{login}' and password = '{pass}'";
                 SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
                 SqlDataReader reader = command.ExecuteReader();
-                //var u = reader.GetName(0);
                 reader.Read();
                 int count = reader.GetInt32(0);
                 reader.Close();

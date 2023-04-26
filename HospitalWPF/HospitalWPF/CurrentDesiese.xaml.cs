@@ -32,7 +32,7 @@ namespace HospitalWPF
             //DataGridRecord.Columns[4].Header = "Время";
             //DataGridRecord.Columns[5].Header = "Проблема";
             database.oppenConnection();
-            SqlDataAdapter adapter = new SqlDataAdapter($"SELECT servies as 'Услуга', secondservies as 'Врач или Услуга', convert(varchar(10), dataserv, 120) AS 'Дата', timeserv As 'Время', problem as 'Проблема' FROM recordset where id_user ='{i}'", database.GetConnection());
+            SqlDataAdapter adapter = new SqlDataAdapter($"SELECT servies as 'Услуга', secondservies as 'Врач или Услуга', nameDoc AS 'ФИО Врача' ,convert(varchar(10), dataserv, 120) AS 'Дата', timeserv As 'Время', problem as 'Проблема' FROM recordset where id_user ='{i}'", database.GetConnection());
             SqlCommandBuilder cb = new SqlCommandBuilder(adapter);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "Disease");

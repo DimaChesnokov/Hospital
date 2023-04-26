@@ -82,20 +82,34 @@ namespace HospitalWPF
 
             }
             string f = "dimon";
+            
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataBase dataBase = new DataBase();
             DataTable table = new DataTable();
-
+            dataBase.oppenConnection();
             string querystring = ""; 
             SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
-          
-            querystring = $"insert into users(login, password,name,f_name,o_name,age,gender) values ('{email}', '{pass}','','','','{0}','')";
+            querystring = $"select count(id) from users where login = '{email}'";
             command = new SqlCommand(querystring, dataBase.GetConnection());
-            adapter.SelectCommand = command;
-            adapter.Fill(table);    
-            
+            SqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            int count = reader.GetInt32(0);
+            reader.Close();
+            if (count > 0)
+                MessageBox.Show("Такой аккаунт уже существет в системе. Придумайте другой логин!", "Внимание!");
+            else
+            {
+                querystring = $"insert into users(login, password,name,f_name,o_name,age,gender) values ('{email}', '{pass}','','','','{0}','')";
+                command = new SqlCommand(querystring, dataBase.GetConnection());
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
 
-            MessageBox.Show("УСПЕШНАЯ РЕГИСТРАЦИЯ", "Успешно!");
+
+                MessageBox.Show("Вы успешно зарегистрировались в системе!", "Подверждение");
+                EntranceCabinet entranceCabinet = new EntranceCabinet();
+                entranceCabinet.Show();
+                Close();
+            }
             // User user = new User("",email, pass, "");
 
         }

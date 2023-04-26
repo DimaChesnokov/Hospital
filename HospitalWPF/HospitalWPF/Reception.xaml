@@ -6,26 +6,26 @@
         xmlns:local="clr-namespace:HospitalWPF"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Reception" Height="450" Width="476" MinWidth="480" MinHeight="550" ResizeMode="NoResize">
-    <Grid Background="#dff7f7" Margin="0,0,0,-43">
-        <Border  BorderThickness="1" HorizontalAlignment="Center" Height="457" VerticalAlignment="Top" Width="440" CornerRadius="20" Margin="0,27,0,0" Background="White">
+        Title="Reception" Height="650" Width="476" MinWidth="480" MinHeight="665" ResizeMode="NoResize">
+    <Grid Background="#dff7f7" Margin="0,0,0,-16">
+        <Border  BorderThickness="1" HorizontalAlignment="Center" Height="568" VerticalAlignment="Top" Width="440" CornerRadius="20" Margin="0,27,0,0" Background="White">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
             </Border.Effect>
             <Canvas HorizontalAlignment="Center" Height="456" VerticalAlignment="Center" Width="440">
                 <Label Content="Запись" Canvas.Left="21" Canvas.Top="17" FontSize="30" FontWeight="Bold" Foreground="#FF000000"/>
                 <Label Content="Выбор услуги:" Canvas.Left="19" Canvas.Top="78" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <ComboBox Name="ComboBoxSelection" Canvas.Left="171" Canvas.Top="119" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" SelectedIndex="0" IsSynchronizedWithCurrentItem="False"/>
+                <ComboBox Name="ComboBoxSelection" Canvas.Left="171" Canvas.Top="119" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" SelectedIndex="0" IsSynchronizedWithCurrentItem="False" SelectionChanged="ComboBoxSelection_SelectionChanged"/>
                 <ComboBox Name="ComboBoxSelectService" Canvas.Left="171" Canvas.Top="78" Width="220" FontSize="20" HorizontalAlignment="Left" SelectionChanged="ComboBoxSelectService_SelectionChanged">
                     <ComboBoxItem Content="Приём у врача"/>
                     <ComboBoxItem Content="Процедуры"/>
                 </ComboBox>
                 <Label Name="LabelService" Content="Врач:" Canvas.Left="19" Canvas.Top="121" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" AutomationProperties.Name="LabelService"/>
-                <Label Content="Дата:" Canvas.Left="19" Canvas.Top="161" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <DatePicker x:Name="dataPicker1" Canvas.Left="171" Canvas.Top="165" VerticalAlignment="Top" RenderTransformOrigin="0.442,0.633" FontSize="20" HorizontalAlignment="Center" AutomationProperties.Name="dataPicker1" SelectedDateChanged="dataPicker1_SelectedDateChanged"/>
-                <Label Content="Время:" Canvas.Left="19" Canvas.Top="202" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <ComboBox x:Name="ComboBox_Time" Canvas.Left="171" Canvas.Top="201" Width="220" FontSize="20" SelectedIndex="0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <RichTextBox x:Name="problem1" Height="100" Width="400" Canvas.Top="291" Canvas.Left="19" HorizontalAlignment="Left" BorderBrush="Black" Foreground="Black" VerticalAlignment="Center" Background="White" FontSize="18" CaretBrush="Black" SelectionBrush="#FF0C0C0C" SelectionTextBrush="#FF151313">
+                <Label Content="Дата:" Canvas.Left="19" Canvas.Top="215" FontSize="20"/>
+                <DatePicker x:Name="dataPicker1" Canvas.Left="171" Canvas.Top="219" RenderTransformOrigin="0.442,0.633" FontSize="20" AutomationProperties.Name="dataPicker1" SelectedDateChanged="dataPicker1_SelectedDateChanged"/>
+                <Label Content="Время:" Canvas.Left="19" Canvas.Top="256" FontSize="20"/>
+                <ComboBox x:Name="ComboBox_Time" Canvas.Left="171" Canvas.Top="255" Width="220" FontSize="20" SelectedIndex="0"/>
+                <RichTextBox x:Name="problem1" Height="100" Width="400" Canvas.Top="345" Canvas.Left="19" BorderBrush="Black" Foreground="Black" Background="White" FontSize="18" CaretBrush="Black" SelectionBrush="#FF0C0C0C" SelectionTextBrush="#FF151313">
                     <RichTextBox.Effect>
                         <DropShadowEffect Color="#FFD5F1F3" ShadowDepth="5" BlurRadius="13"></DropShadowEffect>
                     </RichTextBox.Effect>
@@ -35,9 +35,11 @@
                         </Paragraph>
                     </FlowDocument>
                 </RichTextBox>
-                <Label Content="Опишите проблему:" Canvas.Left="19" Canvas.Top="251" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Content="Подтвердить запись" Canvas.Left="19" Canvas.Top="405" HorizontalAlignment="Left" VerticalAlignment="Center" Width="400" Background="#FFF60D0D" BorderBrush="#FF673AB7" Foreground="#DDFFFFFF" Click="Button_Click"/>
+                <Label Content="Опишите проблему:" Canvas.Left="19" Canvas.Top="305" FontSize="20"/>
+                <Button Content="Подтвердить запись" Canvas.Left="19" Canvas.Top="459" Width="400" Background="#FFF60D0D" BorderBrush="#FF673AB7" Foreground="#DDFFFFFF" Click="Button_Click"/>
                 <Button Content="Назад" Canvas.Left="340" Canvas.Top="32" Width="75" Cursor="Hand" Style="{StaticResource MaterialDesignFlatButton}" Background="#00000000" BorderBrush="#00000000" Foreground="#FFF60D0D" Click="Button_Click_Back"/>
+                <ComboBox x:Name="ComboBoxSelection_Copy" Canvas.Left="171" Canvas.Top="165" Width="220" FontSize="20" SelectedIndex="0" IsSynchronizedWithCurrentItem="False"/>
+                <Label x:Name="LabelService_Copy" Content="ФИО врача:" Canvas.Left="19" Canvas.Top="167" FontSize="20" AutomationProperties.Name="LabelService"/>
             </Canvas>
         </Border>
     </Grid>

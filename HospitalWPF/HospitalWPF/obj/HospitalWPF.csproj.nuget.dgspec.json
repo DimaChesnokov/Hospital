@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj": {}
+    "C:\\Users\\Huawei\\Desktop\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj": {
+    "C:\\Users\\Huawei\\Desktop\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj",
+        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj",
         "projectName": "HospitalWPF",
-        "projectPath": "D:\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj",
-        "packagesPath": "C:\\Users\\dcdim\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Hospital\\HospitalWPF\\HospitalWPF\\obj\\",
+        "projectPath": "C:\\Users\\Huawei\\Desktop\\Hospital\\HospitalWPF\\HospitalWPF\\HospitalWPF.csproj",
+        "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Huawei\\Desktop\\Hospital\\HospitalWPF\\HospitalWPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dcdim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Huawei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -71,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
