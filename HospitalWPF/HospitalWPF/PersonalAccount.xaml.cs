@@ -19,8 +19,8 @@ namespace HospitalWPF
     /// </summary>
     public partial class PersonalAccount : Window
     {
-        DataBase database = new DataBase();
-        public int b = EntranceCabinet.i;
+        DataBase database = new DataBase(); //База данных
+        public int b = EntranceCabinet.i; //Айди пользователя
         public PersonalAccount()
         {
             InitializeComponent();
@@ -36,12 +36,6 @@ namespace HospitalWPF
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
             database.oppenConnection();
-            int age = 0;
-            //string sql = $"Update users set name ='',f_name ='',o_name ='', age = '{age}', gender = '' where id ='{b}'";
-            //SqlCommand command = new SqlCommand(sql, database.GetConnection());
-            //adapter.SelectCommand = command;
-            //adapter.Fill(table);
-            //Имя
             string sqlName = $"SELECT name FROM users where id ='{b}'";
             SqlCommand commandName = new SqlCommand(sqlName, database.GetConnection());
             SqlDataReader readerName = commandName.ExecuteReader();
@@ -82,7 +76,6 @@ namespace HospitalWPF
             string querystring = $"select count(id) from recordset where id_user ='{b}' and dataserv < '{DateTime.Today}'";
             SqlCommand command = new SqlCommand(querystring, database.GetConnection());
             SqlDataReader reader = command.ExecuteReader();
-            //var u = reader.GetName(0);
             reader.Read();
             int count = reader.GetInt32(0);
             reader.Close();
@@ -92,6 +85,9 @@ namespace HospitalWPF
             }
         }
 
+        /// <summary>
+        /// Метод заполнения прошедшими записями истроии записей из текущей записи
+        /// </summary>
         private void OldDataSet()
         {
             database.oppenConnection();
@@ -108,6 +104,9 @@ namespace HospitalWPF
             OldDataDel();
         }
 
+        /// <summary>
+        /// Метод удалениия прошедших записей из текущей записи
+        /// </summary>
         private void OldDataDel()
         {
             database.oppenConnection();
@@ -121,13 +120,23 @@ namespace HospitalWPF
             adapter.SelectCommand = command;
             adapter.Fill(table);
         }
+
+        /// <summary>
+        /// Открывает окно записи к врачу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_Reception(object sender, RoutedEventArgs e)
         {
             Reception reception = new Reception();
             reception.Show();
-
         }
 
+        /// <summary>
+        /// Редактирование данных пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_Edit(object sender, RoutedEventArgs e)
         {
             textBoxName.IsEnabled = true;
@@ -139,6 +148,11 @@ namespace HospitalWPF
             TextBoxEdit.IsEnabled = false;
         }
 
+        /// <summary>
+        /// Сохранение изменённых данных пользователя в бд
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TextBoxSave_Click(object sender, RoutedEventArgs e)
         {
             textBoxName.IsEnabled = false;
@@ -162,6 +176,11 @@ namespace HospitalWPF
             adapter.Fill(table);
         }
 
+        /// <summary>
+        /// Открытие окна карточек врачей
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_Doctor(object sender, RoutedEventArgs e)
         {
             MedAccount medAccount = new MedAccount();
@@ -169,6 +188,11 @@ namespace HospitalWPF
             Close();
         }
 
+        /// <summary>
+        /// Открытие окна текущих записей
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             CurrentDesiese curDisease = new CurrentDesiese();
@@ -176,6 +200,11 @@ namespace HospitalWPF
             Close();
         }
 
+        /// <summary>
+        /// Открыть окно истории записи
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             RecordDesiese RecDisease = new RecordDesiese();
@@ -183,6 +212,11 @@ namespace HospitalWPF
             Close();
         }
 
+        /// <summary>
+        /// Вывод справки
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HelpButton_Click_1(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Врачи- Здесь вы можете просмотреть врачей нашей больницы.\n" +

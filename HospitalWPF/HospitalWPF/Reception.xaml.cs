@@ -19,13 +19,11 @@ namespace HospitalWPF
     /// </summary>
     public partial class Reception : Window
     {
-        DataBase database = new DataBase();
-        public static int i = 0;
+        DataBase database = new DataBase(); //База данных
+        public static int i = 0; //Айди пользователя
         public Reception()
         {
             InitializeComponent();
-            //ComboBoxSelection.Items.Add("Соколов Александр Иванович"); 
-            //ComboBoxSelection.Items.Add("Пыжова Наталья Владимировна");
             dataPicker1.BlackoutDates.AddDatesInPast();
         }
 
@@ -34,16 +32,20 @@ namespace HospitalWPF
             
         }
 
-        private List<string> doctors = new List<string> { "Терапевт", "Хирург", "Стоматолог", "Дерматолог" };
-        private List<string> procedures = new List<string> { "ЭКГ", "Флюрография", "Анализ крови", "Анализ мочи" };
-        private List<string> timesFirst;
-        private List<string> timesSecond;
-        private List<string> Doctors = new List<string>();
+        private List<string> doctors = new List<string> { "Терапевт", "Хирург", "Стоматолог", "Дерматолог" }; //Список врачей
+        private List<string> procedures = new List<string> { "ЭКГ", "Флюрография", "Анализ крови", "Анализ мочи" }; //Список процедур
+        private List<string> timesFirst; //Список времени
+        private List<string> timesSecond; //Список времени
+        private List<string> Doctors = new List<string>(); //Список врачей
         private List<string> timeStr = new List<string> { "C 8:00 до 13:00" };
         private List<string> NulStr = new List<string> {"Свободного времени нет!"};
 
 
-
+        /// <summary>
+        /// Выбор врача или процедуры
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBoxSelectService_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(ComboBoxSelectService.SelectedIndex == 0)
@@ -62,6 +64,10 @@ namespace HospitalWPF
                 ComboBox_Time.ItemsSource = "";
             }
         }
+
+        /// <summary>
+        /// Метод заполнения списка врачей
+        /// </summary>
         private void RecDoctors()
         {
             ComboBoxSelection_Copy.ItemsSource = "";
@@ -81,13 +87,21 @@ namespace HospitalWPF
             }
         }
 
+        /// <summary>
+        /// Закрытие окна
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {
-            //PersonalAccount personalAccount = new PersonalAccount();
-            //personalAccount.Show();
             Close();
         }
 
+        /// <summary>
+        /// Кнопка записи к врачу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             problem1.SelectAll();
@@ -98,11 +112,6 @@ namespace HospitalWPF
             string querystring = "";
             SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
             string problem = problem1.Selection.Text;
-            //if ((ComboBoxSelectService.Text==null)|(ComboBoxSelection.Text==null)| (ComboBoxSelection_Copy.Text==null)|(dataPicker1.SelectedDate.Value.Date.ToShortDateString()==null)|(ComboBox_Time.Text==null)|(problem==null))
-            //{
-            //    MessageBox.Show("Заполните все поля!", "Внимание!");
-            //}
-            //else
             try
             {
                 if (dataPicker1.SelectedDate.Value.Date.DayOfWeek.ToString() != "Sunday")
@@ -128,21 +137,12 @@ namespace HospitalWPF
                 MessageBox.Show("Заполните все поля!", "Внимание!");
             }
         }
-        
-        //private void TimeAdd()
-        //{
-        //    SqlDataAdapter adapter = new SqlDataAdapter();
-        //    DataBase dataBase = new DataBase();
-        //    DataTable table = new DataTable();
-        //    string querystring = "";
-        //    SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
-        //    string problem = problem1.Selection.Text;
-        //    querystring = $"insert into timebufer(dataserv,timeserv) values ('{dataPicker1}','')";
-        //    command = new SqlCommand(querystring, dataBase.GetConnection());
-        //    adapter.SelectCommand = command;
-        //    adapter.Fill(table);
-        //}
 
+        /// <summary>
+        /// Выбор даты в датепикере
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataPicker1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ComboBoxSelectService.SelectedIndex == 0)
@@ -164,6 +164,11 @@ namespace HospitalWPF
                 ComboBox_Time.ItemsSource=timeStr;
             }
         }
+
+        /// <summary>
+        /// Метод заполнения списка времени
+        /// </summary>
+        /// <param name="str"></param>
         private void RecTime(List<string> str)
         {
             int bit = 0;
@@ -196,6 +201,12 @@ namespace HospitalWPF
             else
                 ComboBox_Time.ItemsSource = str; ;
         }
+
+        /// <summary>
+        /// Выбор имени врача
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBoxSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBoxSelection_Copy.IsReadOnly = false;
@@ -212,6 +223,10 @@ namespace HospitalWPF
             }
         }
 
+        /// <summary>
+        /// Метод проверяющий записался ли ты уже на этот день
+        /// </summary>
+        /// <returns></returns>
         private bool CheckOneMore()
         {
             database.oppenConnection();

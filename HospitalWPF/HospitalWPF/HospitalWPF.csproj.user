@@ -16,7 +16,7 @@
     <Compile Update="MedAccount.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MedDentist.xaml.cs">
+    <Compile Update="Новая папка\MedDentist.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PersonalAccount.xaml.cs">
@@ -42,7 +42,7 @@
     <Page Update="MedAccount.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MedDentist.xaml">
+    <Page Update="Новая папка\MedDentist.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PersonalAccount.xaml">

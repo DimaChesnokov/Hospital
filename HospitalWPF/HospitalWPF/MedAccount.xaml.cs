@@ -19,10 +19,14 @@ namespace HospitalWPF
     /// </summary>
     public partial class MedAccount : Window
     {
-        DataBase database = new DataBase();
-        public int b = EntranceCabinet.i;
-        public int count_id = 1;
-        public int count;
+        DataBase database = new DataBase(); //База данных
+        public int b = EntranceCabinet.i; //Айди пользователя
+        public int count_id = 1; //Счётчик пользователей
+        public int count; //Счётчик
+
+        /// <summary>
+        /// Заполнение окна данными из бд
+        /// </summary>
         public MedAccount()
         {
             InitializeComponent();
@@ -35,7 +39,7 @@ namespace HospitalWPF
             reader.Read();
             count = reader.GetInt32(0);
             reader.Close();
-            if (count != 0)
+            if (count != 0) //Проверка на пустоту данных
             {
                 string sqlName = $"SELECT fullName_med FROM MedAccount where id ='{count_id}'";
                 SqlCommand commandName = new SqlCommand(sqlName, database.GetConnection());
@@ -64,8 +68,11 @@ namespace HospitalWPF
             }
         }
 
-
-
+        /// <summary>
+        /// Переход в окно личного аккаунта
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {
             PersonalAccount personalAccount = new PersonalAccount();
@@ -73,6 +80,11 @@ namespace HospitalWPF
             Close();
         }
 
+        /// <summary>
+        /// Переход к следующему врачу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_Next(object sender, RoutedEventArgs e)
         {
             count_id++;
@@ -106,7 +118,11 @@ namespace HospitalWPF
             }
         }
 
-
+        /// <summary>
+        /// Переход к прошлому врачу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_ClBack(object sender, RoutedEventArgs e)
         {
             count_id--;

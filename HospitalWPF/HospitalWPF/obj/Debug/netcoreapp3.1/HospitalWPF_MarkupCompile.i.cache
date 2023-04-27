@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\
 HospitalWPF
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\App.xaml
-8223224000
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\App.xaml
+8-2013793252
 
-151258871506
-2001422479954
-CurrentDesiese.xaml;EntranceCabinet.xaml;MainWindow.xaml;MedAccount.xaml;MedDentist.xaml;PersonalAccount.xaml;Reception.xaml;RecordDesiese.xaml;
+151376052758
+200566702917
+CurrentDesiese.xaml;EntranceCabinet.xaml;MainWindow.xaml;MedAccount.xaml;PersonalAccount.xaml;Reception.xaml;RecordDesiese.xaml;Новая папка\MedDentist.xaml;
 
-True
+False
 

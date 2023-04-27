@@ -19,8 +19,12 @@ namespace HospitalWPF
     /// </summary>
     public partial class RecordDesiese : Window
     {
-        DataBase database = new DataBase();
-        public static int i = 0;
+        DataBase database = new DataBase(); //База данных
+        public static int i = 0; //Айди пользователя
+
+        /// <summary>
+        /// Заполнение датагрида истроии болезни из бд
+        /// </summary>
         public RecordDesiese()
         {
             i = EntranceCabinet.i;
@@ -33,12 +37,13 @@ namespace HospitalWPF
             adapter.Fill(ds, "Disease");
             DataGridRecord1.ItemsSource = ds.Tables["Disease"].DefaultView;
             DataGridRecord1.IsReadOnly = true;
-            //DataGridRecord1.Columns[0].Header = "Услуга";
-            //DataGridRecord1.Columns[1].Header = "Врач/Услуга";
-            //DataGridRecord1.Columns[2].Header = "Дата";
-            //DataGridRecord1.Columns[3].Header = "Время";
-            //DataGridRecord1.Columns[4].Header = "Проблема";
         }
+
+        /// <summary>
+        /// Переход на окно персоналльного аккаунта
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             PersonalAccount personalAccount = new PersonalAccount();

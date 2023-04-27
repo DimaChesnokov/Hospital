@@ -14,13 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="BD1.db">
+    <None Update="Новая папка\BD1.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Новая папка\" />
   </ItemGroup>
 
 </Project>

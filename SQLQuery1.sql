@@ -36,6 +36,6 @@ use hospital;
 --gender char(50)
 --);
 --DELETE FROM users;
-Select* from recordset;
+Select* from users;
 
 

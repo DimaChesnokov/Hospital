@@ -27,18 +27,19 @@ namespace HospitalWPF
             InitializeComponent();
             WindowState = WindowState.Maximized;
         }
-        //ApplicationContext db;
 
-        DataBase dataBase = new DataBase();
-        public static int i;
+        DataBase dataBase = new DataBase(); //База данных
+        public static int i; //Айди пользователя
 
-        
+        /// <summary>
+        /// Вход в аккаунт
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Entry_Click(object sender, RoutedEventArgs e)
         {
             String login = textBoxLogin.Text.Trim();
             String pass = passBox.Password.Trim();
-
-
             if (login.Length < 3)
             {
             textBoxLogin.ToolTip = "Ошибка!";
@@ -62,13 +63,15 @@ namespace HospitalWPF
                 DataTable table = new DataTable();
                 dataBase.oppenConnection();
 
+                //Проверка существует ли такой аккаунт
                 string querystring = $"select count(id) from users where login = '{login}' and password = '{pass}'";
                 SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
                 SqlDataReader reader = command.ExecuteReader();
                 reader.Read();
                 int count = reader.GetInt32(0);
                 reader.Close();
-                if (count !=0)
+
+                if (count !=0) //Вход в аккаунт
                 {
                     querystring = $"select id from users where login = '{login}' and password = '{pass}' ";
                     command = new SqlCommand(querystring, dataBase.GetConnection());
@@ -88,6 +91,7 @@ namespace HospitalWPF
             }
         }
 
+        //Переход в акно входа
         private void Button_Click_Register(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();

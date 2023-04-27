@@ -43,7 +43,6 @@ C:\Users\dcdim\source\repos\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\Entr
 C:\Users\dcdim\source\repos\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\EntranceCabinet.baml
 C:\Users\dcdim\source\repos\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\PersonalAccount.g.cs
 C:\Users\dcdim\source\repos\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\PersonalAccount.baml
-D:\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\BD1.db
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.exe
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.dll.config
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\HospitalWPF.deps.json
@@ -230,8 +229,6 @@ C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\Hospi
 C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\HospitalWPF.dll
 C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\HospitalWPF.pdb
 C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\HospitalWPF.genruntimeconfig.cache
-D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.g.cs
-D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.baml
 C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.g.cs
 C:\Users\i\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.baml
 C:\Users\Huawei\Desktop\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\MedDentist.g.cs
@@ -244,3 +241,6 @@ D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\CurrentDesies
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\RecordDesiese.g.cs
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\CurrentDesiese.baml
 D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\RecordDesiese.baml
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\bin\Debug\netcoreapp3.1\Новая папка\BD1.db
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\Новая папка\MedDentist.g.cs
+D:\GitHub\Hospital\HospitalWPF\HospitalWPF\obj\Debug\netcoreapp3.1\Новая папка\MedDentist.baml

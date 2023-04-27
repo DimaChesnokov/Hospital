@@ -61,7 +61,7 @@
                         <Button Content="Врачи" Background="#FFF0F0F0" FontSize="14" Cursor="Hand" Height="30" BorderBrush="LightGray" Foreground="#DD888888" Margin="0,26,0,125" Click="Button_Click_Doctor"  />
                         <Button Content="История записей" Background="#FFF0F0F0" FontSize="14" Cursor="Hand" Height="30" BorderBrush="LightGray" Foreground="#DD888888" Margin="0,64,0,87" Click="Button_Click_1"/>
                         <Button Content="Текущие записи" Background="#FFF0F0F0" FontSize="14" Cursor="Hand" Height="30" BorderBrush="LightGray" Foreground="#DD888888" Margin="0,102,0,49" Click="Button_Click"/>
-                        <Button x:Name="HelpButton" Content="Справка" Background="#FFF0F0F0" FontSize="14" Cursor="Hand" Height="30" BorderBrush="LightGray" Foreground="#DD888888" Margin="103,32,-103,-57" Click="HelpButton_Click_1" Grid.Row="1"/>
+                        <Button x:Name="HelpButton" Content="Справка" Background="#FFF0F0F0" FontSize="14" Cursor="Hand" Height="30" BorderBrush="LightGray" Foreground="#DD888888" Margin="0,137,0,14" Click="HelpButton_Click_1"/>
                     </Grid>
                 </Border>
             </Canvas>

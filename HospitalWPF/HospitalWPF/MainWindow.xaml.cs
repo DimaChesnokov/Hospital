@@ -24,29 +24,20 @@ namespace HospitalWPF
     public partial class MainWindow : Window
     {
         public int dd;
-
-        //ApplicationContext db;
         DataBase database = new DataBase();
         
         public MainWindow()
         {
             InitializeComponent();
-            //db = new ApplicationContext();
-            //database.oppenConnection();
             WindowState = WindowState.Maximized;
-
-
-            //List<User> user = db.Users.ToList();
         }
        
 
         //Регистрация
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //String login = textBoxLogin.Text.Trim();
             String pass = passBox.Password.Trim();
             String email = textBoxEmail.Text.Trim().ToLower();
-            //String age = textBoxAge.Text.Trim();
 
             
              if (pass.Length < 4)
@@ -54,47 +45,37 @@ namespace HospitalWPF
                 passBox.ToolTip = "Ошибка!";
                 passBox.Background = Brushes.Red;
             }
-            else if (email.Length < 4 /*|| !email.Contains("@") || !email.Contains(".")*/)
+            else if (email.Length < 4)
             {
                 textBoxEmail.ToolTip = "Ошибка!";
                 textBoxEmail.Background = Brushes.Red;
             }
-            //else if (Convert.ToInt32(age) <= 18)
-            //{
-            //    textBoxAge.ToolTip = "Ошибка!";
-            //    textBoxAge.Background = Brushes.Red;
-            //}
+
             else
             {
-                //пустые поля 
-                //textBoxLogin.ToolTip = "";
-                //textBoxLogin.Background = Brushes.Transparent;
-
-
-
                 passBox.ToolTip = "";
                 passBox.Background = Brushes.Transparent;
 
                 textBoxEmail.ToolTip = "";
                 textBoxEmail.Background = Brushes.Transparent;
-
-
-
             }
-            string f = "dimon";
             
+
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataBase dataBase = new DataBase();
             DataTable table = new DataTable();
-            dataBase.oppenConnection();
+            dataBase.oppenConnection(); //Подключение к БД
             string querystring = ""; 
             SqlCommand command = new SqlCommand(querystring, dataBase.GetConnection());
-            querystring = $"select count(id) from users where login = '{email}'";
+            querystring = $"select count(id) from users where login = '{email}'"; // SQL - запрос
             command = new SqlCommand(querystring, dataBase.GetConnection());
             SqlDataReader reader = command.ExecuteReader();
             reader.Read();
             int count = reader.GetInt32(0);
             reader.Close();
+
+
+
             if (count > 0)
                 MessageBox.Show("Такой аккаунт уже существет в системе. Придумайте другой логин!", "Внимание!");
             else
@@ -110,16 +91,14 @@ namespace HospitalWPF
                 entranceCabinet.Show();
                 Close();
             }
-            // User user = new User("",email, pass, "");
-
         }
 
+        //Переход в окно регистрации
         private void Button_Click_1(object sender, RoutedEventArgs e)
         { 
             EntranceCabinet entranceCabinet = new EntranceCabinet();
             entranceCabinet.Show();
             Close();
-            //Hide();
         }
     }
 }
